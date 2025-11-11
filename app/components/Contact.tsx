@@ -2,8 +2,8 @@
 
 export default function Contact() {
   const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'lorenaayarah@gmail.com'
-  const bookingUrl =
-    process.env.NEXT_PUBLIC_BOOKING_URL ?? 'https://calendar.app.google/'
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=Project%20Inquiry&body=Hi%20Tobore,`
+
   return (
     <section id="contact" className="py-20 px-6 sm:px-8 lg:px-12">
       <div className="max-w-4xl mx-auto text-center">
@@ -15,7 +15,9 @@ export default function Contact() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href= "https://mail.google.com/mail/?view=cm&to=lorenaayarah@gmail.com&su=Project%20Inquiry&body=Hi%20Tobore..."
+            href={gmailLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 font-medium hover:scale-105 active:scale-95"
           >
             <svg
@@ -38,4 +40,3 @@ export default function Contact() {
     </section>
   )
 }
-
