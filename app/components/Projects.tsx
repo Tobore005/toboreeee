@@ -23,7 +23,7 @@ export default function Projects() {
       image: "/school.png",
       tags: ["React", "Tailwind CSS"],
     },
-    // Add more projects as needed
+    
   ];
 
   return (

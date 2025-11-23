@@ -26,7 +26,7 @@ export default function Articles() {
       platform: 'Medium',
       date: 'Nov 2024',
     },
-    // Add more articles as needed
+    
   ]
 
   return (

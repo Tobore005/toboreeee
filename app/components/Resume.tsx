@@ -20,7 +20,7 @@ export default function Resume() {
           <div className="space-y-8">
             {[
               { period: '2025 – Present', role: 'Technical Writer & Community Manager', company: 'Nelo' },
-              { period: '2024 – Present', role: 'Front‑End Developer', company: 'Delta State Health Info & Booking System' },
+              { period: '2024 – Present', role: 'Front‑End Developer & Documentation Engineer', company: 'Delta Health' },
               { period: '2024', role: 'Front‑End Development Intern', company: 'Mrsoft International' },
               { period: '2022 – Present', role: 'Freelance Front‑End Developer & Technical Writer', company: 'Remote' },
             ].map((item) => (
@@ -30,11 +30,9 @@ export default function Resume() {
                 </div>
                 <div className="sm:col-span-8 flex items-center gap-3 text-gray-900">
                   <span className="font-semibold">{item.role}</span>
-                  <span className="text-gray-500">at</span>
+                  <span className="text-gray-500 inline-grid place-items-center h-5 w-5 rounded-md bg-gray-100  text-[12px] font-bold border border-gray-200">at</span>
                   <span className="inline-flex items-center gap-2">
-                    <span className="inline-grid place-items-center h-5 w-5 rounded-md bg-gray-100 text-gray-600 text-[10px] font-bold border border-gray-200">
-                      •
-                    </span>
+                    
                     <span className="font-medium text-gray-800">{item.company}</span>
                   </span>
                 </div>
