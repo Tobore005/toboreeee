@@ -13,7 +13,7 @@ export default function Contact() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://mail.google.com/mail/u/0/?fs=1&to=lorenaayarah@gmail.com&su=Project+Inquiry&body=Hi+Tobore,&tf=cm"
+            href="mailto:lorenaayarah@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 font-medium hover:scale-105 active:scale-95"

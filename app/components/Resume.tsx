@@ -60,8 +60,8 @@ export default function Resume() {
 
           <div className="mt-10 flex flex-wrap gap-3 justify-center">
             <a
-              href="/Tobore's Resume.pdf"
-              download="Tobore's Resume.pdf"
+              href="/RESUME.pdf"
+              download="RESUME.pdf"
               type="application/pdf"
               aria-label="Download resume PDF"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-gray-900 text-white hover:bg-gray-800 transition-colors font-medium"
