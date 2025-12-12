@@ -5,7 +5,7 @@ export default function Articles() {
     {
       title: 'Your Web3 Products UX Is Driving Users Away.',
       description: 'Why Poor UX Is Holding Back Web3 Adoption And How to Fix It',
-      url: 'https://medium.com/@lorenaayarah/your-web3-products-ux-is-driving-users-away-7515424529ae',
+      url: 'https://medium.com/@tobore/your-web3-products-ux-is-driving-users-away-dfae8185e53a',
       image: '/uxcover.png',
       platform: 'Medium',
       date: 'Oct 9, 2025',
@@ -21,7 +21,7 @@ export default function Articles() {
     {
       title: 'The Crypto Bloodbath of October 2025: Inside the $20 Billion Meltdown and What It Means for the Next Cycle',
       description: 'Bitcoin fell from $126K to around $105K, Ethereum dropped over 11%, and altcoins like Solana and Avalanche plummeted by 70%. This sharp decline highlights the markets fragility, but it may not be the end.',
-      url: '#',
+      url: 'https://medium.com/@tobore/3d20e3e5539f',
       image: '/cyptobloodbath.png',
       platform: 'Medium',
       date: 'Nov 2024',
