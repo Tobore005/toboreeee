@@ -17,10 +17,10 @@ export default function Projects() {
       tags: ["Next", "RainbowKit", "Moralis", "Tailwind CSS"],
     },
     {
-      title: "Ayarah.UNI",
+      title: "Chef Marv",
       description: "A React-based platform offering interactive features for a personalized user experience.",
-      url: "https://ayarah-uni.vercel.app/",
-      image: "/school.png",
+      url: "https://chefmarvv.vercel.app/",
+      image: "/chef.png",
       tags: ["React", "Tailwind CSS"],
     },
     

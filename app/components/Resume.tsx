@@ -56,7 +56,7 @@ export default function Resume() {
             </div>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-3 justify-center">
+          <div className="mt-10 flex flex-wrap gap-3 justify-cenytervemyrtk ghynyujhijkj">
             <a
               href="/RESUME.pdf"
               download="RESUME.pdf"
