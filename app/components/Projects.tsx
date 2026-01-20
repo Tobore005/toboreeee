@@ -23,6 +23,14 @@ export default function Projects() {
       image: "/chef.png",
       tags: ["React", "Tailwind CSS"],
     },
+
+    {
+      title: "Writers portfolio",
+      description: "Design + copywriting services to grow your brand.",
+      url: "https://lara-s-port.vercel.app/",
+      image: "/image.png",
+      tags: ["React", "Tailwind CSS"],
+    },
     
   ];
 
