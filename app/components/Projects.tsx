@@ -21,7 +21,7 @@ export default function Projects() {
       description: "A React-based platform offering interactive features for a personalized user experience.",
       url: "https://chefmarvv.vercel.app/",
       image: "/chef.png",
-      tags: ["React", "Tailwind CSS"],
+      tags: ["Next.JS", "Tailwind CSS"],
     },
 
     {
@@ -29,7 +29,7 @@ export default function Projects() {
       description: "Design + copywriting services to grow your brand.",
       url: "https://lara-s-port.vercel.app/",
       image: "/image.png",
-      tags: ["React", "Tailwind CSS"],
+      tags: ["Next.JS", "Tailwind CSS, Typescript"],
     },
     
   ];
