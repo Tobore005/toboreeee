@@ -11,6 +11,14 @@ export default function Articles() {
       date: 'Oct 9, 2025',
     },
     {
+      title: 'How AI Is Reshaping Software Development and the Tech Industry in 2026',
+      description: 'Welcome to 2026, where 46% of all code written by active developers comes from AI, where 20 million dev...',
+      url: 'https://medium.com/@tobore/how-ai-is-reshaping-software-development-and-the-tech-industry-in-2026-4ec7f7a801df',
+      image: '/ai.png',
+      platform: 'Medium',
+      date: 'Feb 2026',
+    },
+    {
       title: 'It’s almost 2026: Why Are We Still Arguing About CSS vs Tailwind',
       description: 'Tailwind vs CSS',
       url: 'https://dev.to/toboreeee/its-almost-2026-why-are-we-still-arguing-about-css-vs-tailwind-291f',
@@ -34,7 +42,7 @@ export default function Articles() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Technical Writing
+            Content Writing
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Articles and tutorials I've written to share knowledge and help others learn

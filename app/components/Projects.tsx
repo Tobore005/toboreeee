@@ -9,6 +9,15 @@ export default function Projects() {
       image: "/delta.png",
       tags: ["Next.js", "PHP", "MySQL", "Tailwind CSS", "Laravel"],
     },
+
+    {
+      title: "Pantheon",
+      description: "Winning strategies through deep research and strategic connections.",
+      url: "https://pantheon-portfolio-frontend.pxxl.click/",
+      image: "/pantheon.png",
+      tags: ["React.JS", "Typescript", "Tailwind CSS"],
+    },
+    
     {
       title: "NFT Gallery",
       description: "A hands-on NFT gallery built with Next.js and RainbowKit, showcasing minting, listing, and user interaction features",
@@ -29,8 +38,33 @@ export default function Projects() {
       description: "Design + copywriting services to grow your brand.",
       url: "https://lara-s-port.vercel.app/",
       image: "/image.png",
-      tags: ["Next.JS", "Tailwind CSS, Typescript"],
+      tags: ["Next.JS", "Tailwind CSS", "Typescript"],
     },
+
+    {
+      title: "HiNaija Travel App",
+      description: "Plan your next getaway, discover hidden gems, and explore nature, all in one app",
+      url: "https://hi-naija-silk.vercel.app/",
+      image: "/hinaija.png",
+      tags: ["Next.JS", "Tailwind CSS", "Typescript"],
+    },
+
+    {
+      title: "AYARAH.UNI",
+      description: "Designed to empower students with the knowledge, skills and experiences needed to excel in dynamic field of education.",
+      url: "https://ayarah-uni.vercel.app/",
+      image: "/ayarah.png",
+      tags: ["React.JS", "CSS"],
+    },
+
+    {
+      title: "SkillBridge",
+      description: "A platform for connecting students with mentors and career development resources.",
+      url: "https://skills-bridge-rho.vercel.app/",
+      image: "/skillsbridge.png",
+      tags: ["Next.JS", "Typescript", "Tailwind CSS"],
+    },
+    
     
   ];
 

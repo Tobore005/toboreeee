@@ -1,73 +1,217 @@
 'use client'
 
+import { useState } from 'react'
+
+const experiences = [
+  {
+    period: '2025 – Present',
+    role: 'Technical Writer & Community Manager',
+    company: 'Nelo',
+    idx: '01',
+  },
+  {
+    period: '2024 – 2025',
+    role: 'Front‑End Developer & Documentation Engineer',
+    company: 'Delta Health',
+    idx: '02',
+  },
+  {
+    period: '2025-2026',
+    role: 'Front-End Developer & Documentation Engineer',
+    company: 'Mrsoft International',
+    idx: '03',
+  },
+  {
+    period: '2024',
+    role: 'Front‑End Development Intern',
+    company: 'Mrsoft International',
+    idx: '04',
+  },
+  {
+    period: '2022 – Present',
+    role: 'Freelance Front‑End Developer & Technical Writer',
+    company: 'Remote',
+    idx: '05',
+  },
+]
+
+const skills = [
+  'TypeScript',
+  'React',
+  'Next.js',
+  'Tailwind CSS',
+  'Node.js',
+  'Git',
+  'Documentation',
+  'SEO',
+  'UX Design',
+  'Testing',
+]
+
+// matches the blue-600 accent from Hero
+const ACCENT = 'rgb(37,99,235)' // blue-600
+
 export default function Resume() {
+  const [hovered, setHovered] = useState<string | null>(null)
+
   return (
-    <section id="resume" className="py-20 px-6 sm:px-8 lg:px-12 bg-[#f3f4f6]">
-      <div className="max-w-6xl mx-auto relative overflow-hidden rounded-3xl">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(90%_60%_at_100%_0%,rgba(59,130,246,0.12),transparent_50%),radial-gradient(80%_50%_at_0%_100%,rgba(168,85,247,0.12),transparent_50%)]"></div>
+    <section
+      id="resume"
+      className="relative py-24 px-6 sm:px-8 lg:px-12 bg-[#f3f4f6] overflow-hidden"
+    >
+      {/* Ambient orbs — mirror Hero's blue accent */}
+      <div className="pointer-events-none absolute -top-40 -right-40 w-[560px] h-[560px] rounded-full bg-blue-100/50 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -left-40 w-[420px] h-[420px] rounded-full bg-blue-50/60 blur-3xl" />
 
-        <div className="relative p-6 sm:p-10 lg:p-14">
-          <div className="flex justify-center mb-8">
-            <span className="px-5 py-2 rounded-full bg-white/70 backdrop-blur text-sm font-medium text-gray-800 border border-gray-200 shadow-sm">
-             Front‑End Developer & Technical Writer
-            </span>
-          </div>
+      <div className="relative max-w-4xl mx-auto">
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">
-            My work experience
+        {/* ── Header — mirrors Hero h1 sizing & font weight ── */}
+        <div className="mb-20 text-center">
+          <p className="inline-block mb-5 text-[10px] font-bold uppercase tracking-[0.2em] text-blue-600">
+            Career Timeline
+          </p>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
+            My{' '}
+            <span className="text-blue-600">Work</span>
+            <br />
+            Experience
           </h2>
+        </div>
 
-          <div className="space-y-8">
-            {[
-              { period: '2025 – Present', role: 'Technical Writer & Community Manager', company: 'Nelo' },
-              { period: '2024 – Present', role: 'Front‑End Developer & Documentation Engineer', company: 'Delta Health' },
-              { period: '2024', role: 'Front‑End Development Intern', company: 'Mrsoft International' },
-              { period: '2022 – Present', role: 'Freelance Front‑End Developer & Technical Writer', company: 'Remote' },
-            ].map((item) => (
-              <div key={item.role} className="grid grid-cols-1 sm:grid-cols-12 gap-3 items-start">
-                <div className="sm:col-span-4 text-gray-600 text-base">
-                  {item.period}
-                </div>
-                <div className="sm:col-span-8 flex items-center gap-3 text-gray-900">
-                  <span className="font-semibold">{item.role}</span>
-                  <span className="text-gray-500 inline-grid place-items-center h-5 w-5 rounded-md bg-gray-100  text-[12px] font-bold border border-gray-200">at</span>
-                  <span className="inline-flex items-center gap-2">
-                    
-                    <span className="font-medium text-gray-800">{item.company}</span>
+        {/* ── Experience rows ── */}
+        <div className="mb-20">
+          {experiences.map((item) => {
+            const isHovered = hovered === item.idx
+            const isDimmed = hovered !== null && !isHovered
+
+            return (
+              <div
+                key={item.idx}
+                onMouseEnter={() => setHovered(item.idx)}
+                onMouseLeave={() => setHovered(null)}
+                className={`relative cursor-default transition-all duration-300 ${
+                  isDimmed ? 'opacity-25' : 'opacity-100'
+                }`}
+              >
+                <div className="h-px bg-gray-300" />
+
+                <div className="relative flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 py-7">
+
+                  {/* Blue left gutter bar on hover */}
+                  <div
+                    className={`absolute left-0 top-0 w-0.5 transition-all duration-300 rounded-full ${
+                      isHovered ? 'h-full bg-blue-600 opacity-100' : 'h-0 opacity-0'
+                    }`}
+                  />
+
+                  {/* Ghost index — huge, slides in */}
+                  <span
+                    aria-hidden
+                    className="hidden lg:block pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 text-[8rem] font-black leading-none select-none text-blue-600/10 transition-all duration-500"
+                    style={{
+                      opacity: isHovered ? 1 : 0,
+                      transform: `translateY(-50%) translateX(${isHovered ? '0' : '1.5rem'})`,
+                    }}
+                  >
+                    {item.idx}
+                  </span>
+
+                  {/* Small idx */}
+                  <span className="text-[11px] font-bold tracking-widest text-gray-300 tabular-nums w-8 shrink-0 select-none">
+                    {item.idx}
+                  </span>
+
+                  {/* Period */}
+                  <span
+                    className={`text-sm font-medium tabular-nums sm:w-40 shrink-0 transition-colors duration-300 ${
+                      isHovered ? 'text-blue-600' : 'text-gray-400'
+                    }`}
+                  >
+                    {item.period}
+                  </span>
+
+                  {/* Role */}
+                  <span
+                    className={`flex-1 font-bold text-xl sm:text-2xl leading-snug transition-colors duration-300 ${
+                      isHovered ? 'text-gray-900' : 'text-gray-700'
+                    }`}
+                  >
+                    {item.role}
+                  </span>
+
+                  {/* Company — animated underline */}
+                  <span
+                    className={`text-sm font-semibold shrink-0 sm:ml-4 transition-all duration-300 ${
+                      isHovered ? 'text-blue-600' : 'text-gray-400'
+                    }`}
+                  >
+                    {item.company}
+                    <span
+                      className={`block h-0.5 bg-blue-600 mt-0.5 transition-all duration-300 rounded-full ${
+                        isHovered ? 'w-full' : 'w-0'
+                      }`}
+                    />
                   </span>
                 </div>
               </div>
+            )
+          })}
+          <div className="h-px bg-gray-300" />
+        </div>
+
+        {/* ── Skills — inline flowing tags ── */}
+        <div className="mb-20">
+          <p className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-5">
+            Core Skills
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {skills.map((s) => (
+              <span
+                key={s}
+                className="group relative px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-200 cursor-default"
+              >
+                <span className="relative z-10">{s}</span>
+                <span className="absolute inset-0 rounded-full border border-transparent group-hover:border-blue-200 bg-white/0 group-hover:bg-blue-50 transition-all duration-200" />
+              </span>
             ))}
           </div>
-
-          <div className="mt-14 center">
-            <div className="flex gap-4 overflow-x-auto no-scrollbar py-3 justify-center">
-              {[
-                'TS','React','Next','Tailwind','Node','Git','Docs','SEO','UX','Testing'
-              ].map((t) => (
-                <div
-                  key={t}
-                  className="shrink-0 h-16 w-16 rounded-2xl bg-white border border-gray-200 grid place-items-center text-sm font-semibold text-gray-700 shadow-sm"
-                  title={t}
-                >
-                  {t}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-10 flex flex-wrap gap-3 justify-cenytervemyrtk ghynyujhijkj">
-            <a
-              href="/RESUME.pdf"
-              download="RESUME.pdf"
-              type="application/pdf"
-              aria-label="Download resume PDF"
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-gray-900 text-white hover:bg-gray-800 transition-colors font-medium"
-            >
-              Download Resume
-            </a>
-          </div>
         </div>
+
+        {/* ── Footer: tagline + download ── */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-8">
+          <p className="text-gray-400 text-sm max-w-xs leading-relaxed">
+            3+ years shipping interfaces, docs, and developer experiences across startups and freelance engagements.
+          </p>
+
+          <a
+            href="/RESUME.pdf"
+            download="RESUME.pdf"
+            type="application/pdf"
+            aria-label="Download resume PDF"
+            className="group relative inline-flex items-center gap-3 px-7 py-4 rounded-full bg-gray-900 text-white text-sm font-semibold overflow-hidden transition-all duration-300 hover:bg-blue-600 hover:shadow-xl hover:shadow-blue-200 hover:-translate-y-0.5 self-start sm:self-auto"
+          >
+            {/* Shimmer sweep */}
+            <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="transition-transform duration-300 group-hover:translate-y-0.5"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download Resume
+          </a>
+        </div>
+
       </div>
     </section>
   )
